@@ -1,0 +1,13 @@
+﻿@model List<KeyValuePair<int,string>>
+@{
+    ViewBag.Title = "Home Page";
+}
+<form method="get" action="/Home/Donut">
+    <select name="donutID" onchange="/Home/Donut">
+        @foreach(KeyValuePair<int,string> donut in Model)
+        {
+            <option value="@donut.Key">@donut.Value</option> 
+        }
+    </select>
+    <input type="submit" value="FIND" />
+</form>

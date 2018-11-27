@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Donut";
+}
+
+<h2>Donut</h2>
+<h3>@ViewBag.Name</h3>
+<p>Calories: @ViewBag.Calories</p>
+<p>Extras:</p>
+<ul>
+    @foreach(string ex in ViewBag.Extras)
+    {
+        <li>
+            @ex
+        </li>
+    }
+</ul>
+@if(ViewBag.Photo != null)
+{
+    <img width="500" src="@ViewBag.Photo" />
+}
+
+
+
